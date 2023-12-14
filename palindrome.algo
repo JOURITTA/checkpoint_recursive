@@ -1,0 +1,24 @@
+FUNCTION palindrome(ch:string) : BOOLEAN
+VAR
+    Pal:BOOLEAN;
+BEGIN
+    If Length(ch) < 2 Then 
+    Pal := True
+Else If (ch[1] = ch[length(ch)])
+Then Palindrome := Palindrome (sous_chaine (ch, 2, Length (ch) - 2))
+Else Pal := False
+    RETURN Pal ;
+END 
+
+ALGORITHM verif_palindrome
+VAR
+    ch:string;
+    pal:BOOLEAN;
+BEGIN
+    Write ("entrer une chaine de caractere");
+    Read (ch);
+   pal:= palindrome(ch:string);
+ If pal= True Then 
+ Write (ch, " est un palindrome.")
+Else Write (ch, "n est pas un palindrome.");
+END
